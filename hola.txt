@@ -1,0 +1,2 @@
+Hola este es el primer texto que estoy implementando,
+para ser honestos espero poder programar sin la necesidad de ver un tutorial  en el futuro.
