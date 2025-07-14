@@ -1,15 +1,15 @@
-const { log } = require('node:console');
 const fs = require('node:fs');
+const { text } = require('node:stream/consumers');
 
-console.log('Leyendo el contenido del archivo hola.txt...');
-const texto = fs.readFileSync('./hola.txt', 'utf8');
-
-console.log(texto);
+console.log('Leyendo el contenido del primer archivo hola.txt...');
+fs.readFile('./hola.txt', 'utf8', (err, texto) => {
+    console.log('Primer texto:',texto);
+});
 
 console.log('Haciendo cosas mientras lee el archivo Texto.txt...');
 
 
 console.log('Leyendo el segundo contennido del archivo Texto.txt...');
-const secondText = fs.readFileSync('./texto.txt', 'utf8');
-
-console.log(secondText)
+const secondText = fs.readFile('./texto.txt', 'utf8', (err,texto) => {
+    console.log('Segundo texto:',texto);
+});
